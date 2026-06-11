@@ -1,6 +1,6 @@
 ---
 title: "Are prediction markets well-calibrated? A check on 5,125 resolved Manifold markets"
-date: 2026-06-15
+date: 2026-06-11T12:30:00+08:00
 draft: false
 math: true
 tags: ["prediction-markets", "calibration", "scoring-rules", "manifold", "empirical"]

@@ -1,6 +1,6 @@
 ---
 title: "Using AI agents to clean financial data: a year's worth of honest notes"
-date: 2026-06-14
+date: 2026-06-11T12:00:00+08:00
 draft: false
 math: false
 tags: ["practitioner", "data-engineering", "ai-agents", "llm", "tooling"]

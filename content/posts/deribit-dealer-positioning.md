@@ -1,6 +1,6 @@
 ---
 title: "Reading dealer positioning on Deribit: GEX, SVI, and what the SqueezeMetrics sign assumption actually buys you"
-date: 2026-06-13
+date: 2026-06-11T11:30:00+08:00
 draft: false
 math: true
 tags: ["options", "microstructure", "deribit", "gex", "svi", "btc"]

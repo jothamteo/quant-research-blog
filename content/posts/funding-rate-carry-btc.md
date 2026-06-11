@@ -1,6 +1,6 @@
 ---
 title: "Funding-rate carry in BTC perps: 7.4% a year, plus everything that number leaves out"
-date: 2026-06-16
+date: 2026-06-11T13:00:00+08:00
 draft: false
 math: true
 tags: ["crypto", "perpetuals", "carry-trade", "funding-rate", "btc", "backtest"]

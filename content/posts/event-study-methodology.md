@@ -1,6 +1,6 @@
 ---
 title: "A practical guide to event studies: the linear algebra and statistics behind the market model"
-date: 2026-06-12
+date: 2026-06-11T11:00:00+08:00
 draft: false
 math: true
 tags: ["methodology", "event-study", "linear-algebra", "statistics", "explainer"]
