@@ -1,0 +1,112 @@
+baseURL: "https://jothamteo.github.io/quant-research-blog/"
+locale: "en-us"
+title: "Jotham Teo — Quant Research"
+theme: "PaperMod"
+
+enableInlineShortcodes: true
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+buildExpired: false
+pygmentsUseClasses: true
+enableEmoji: false
+
+canonifyURLs: false
+
+minify:
+  disableXML: true
+  minifyOutput: true
+
+pagination:
+  pagerSize: 10
+
+params:
+  env: production
+  title: "Jotham Teo — Quant Research"
+  description: "Reproducible, honest quantitative research on equities, options, and crypto microstructure."
+  author: "Jotham Teo"
+  defaultTheme: "auto"
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowShareButtons: false
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowWordCount: true
+  ShowToc: true
+  TocOpen: true
+  comments: false
+  hidemeta: false
+  hideSummary: false
+  ShowRssButtonInSectionTermList: true
+
+  homeInfoParams:
+    Title: "Jotham Teo"
+    Content: |
+      Quantitative research with rigour, honesty, and reproducible code.
+
+      MSc Quantitative Finance. Background in finance and software. I write about
+      what the data actually says — including when it disagrees with popular claims.
+
+      Each post links to the analysis code on GitHub. Methodologies are documented,
+      assumptions are stated, limitations are not buried.
+
+  socialIcons:
+    - name: github
+      url: "https://github.com/jothamteo"
+    - name: rss
+      url: "/quant-research-blog/index.xml"
+
+  math: false
+  assets:
+    disableFingerprinting: false
+
+  cover:
+    hidden: false
+    hiddenInList: false
+    hiddenInSingle: false
+
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    location: 0
+    distance: 1000
+    threshold: 0.4
+    minMatchCharLength: 0
+    keys: ["title", "permalink", "summary", "content"]
+
+menu:
+  main:
+    - identifier: posts
+      name: Posts
+      url: /posts/
+      weight: 10
+    - identifier: about
+      name: About
+      url: /about/
+      weight: 20
+    - identifier: search
+      name: Search
+      url: /search/
+      weight: 30
+    - identifier: tags
+      name: Tags
+      url: /tags/
+      weight: 40
+
+markup:
+  highlight:
+    style: "monokai"
+    lineNos: false
+    codeFences: true
+    guessSyntax: true
+    noClasses: false
+  goldmark:
+    renderer:
+      unsafe: true
+
+outputs:
+  home:
+    - HTML
+    - RSS
+    - JSON

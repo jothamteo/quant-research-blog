@@ -1,0 +1,7 @@
+{{/*
+  Extends PaperMod's <head>. Loads KaTeX only when the page opts in via
+  `math: true` in its front matter (per-post) or globally via `Params.math`.
+*/}}
+{{- if or .Params.math .Site.Params.math -}}
+{{ partial "math.html" . }}
+{{- end -}}
