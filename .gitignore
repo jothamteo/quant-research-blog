@@ -8,3 +8,10 @@ node_modules/
 # Large generated data — kept out of the blog repo but reproducible via the scripts
 code/sp500_index_addition_premium/data/prices/
 code/sp500_index_addition_premium/data/sp500_close.parquet
+
+# Funding-rate carry generated data
+code/funding_rate_carry/data/funding_btcusdt.csv
+code/funding_rate_carry/data/spot_btcusdt.csv
+
+# Prediction-market generated data
+code/prediction_market_calibration/data/resolved_markets.csv

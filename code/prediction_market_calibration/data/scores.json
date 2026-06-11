@@ -1,0 +1,11 @@
+{
+  "n_markets": 5125,
+  "base_rate_yes": 0.4649756097560976,
+  "brier_market": 0.08907066530650005,
+  "brier_baseline_05": 0.25,
+  "brier_baseline_base": 0.24877329208804286,
+  "log_market": -0.27787767149389314,
+  "log_baseline_05": -0.6931471805599454,
+  "log_baseline_base": -0.6906917543711867,
+  "ece_market": 0.030737139687772277
+}

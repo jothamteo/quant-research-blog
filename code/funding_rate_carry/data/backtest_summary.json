@@ -1,0 +1,20 @@
+{
+  "n_days": 1101,
+  "n_funding_periods": 3300,
+  "first": "2023-06-07 08:00:00.016000+00:00",
+  "last": "2026-06-11 00:00:00+00:00",
+  "mean_funding_bps_per_8h": 0.6748555151515152,
+  "std_funding_bps_per_8h": 0.896200605295312,
+  "frac_positive_periods": 0.8478787878787879,
+  "total_funding": 0.22270232,
+  "annualised_return": 0.07382956112624887,
+  "annualised_after_4bps_round_trip": 0.07369695440508629,
+  "daily_mean": 0.000202272770208901,
+  "daily_std": 0.00025269170601464484,
+  "sharpe_annualised": 15.293006287106035,
+  "max_drawdown": -0.004055549999999963,
+  "worst_8h_period": -0.00015178,
+  "best_8h_period": 0.00088148,
+  "worst_day": -0.00030303000000000003,
+  "best_day": 0.00220077
+}
