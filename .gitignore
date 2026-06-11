@@ -4,3 +4,7 @@ resources/
 .DS_Store
 node_modules/
 *.log
+
+# Large generated data — kept out of the blog repo but reproducible via the scripts
+code/sp500_index_addition_premium/data/prices/
+code/sp500_index_addition_premium/data/sp500_close.parquet
