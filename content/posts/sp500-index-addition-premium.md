@@ -48,10 +48,18 @@ The tricky part of a claim like "the stock ran up 3%" is the obvious follow-up:
 and a stock that happens to get added to the index might have been rising anyway.
 So before we can say a move is *abnormal*, we need a baseline for what's normal.
 
-That baseline is the **market model**. For each addition event with effective
-date $t = 0$, I fit a regression of the stock's daily log return on the S&P 500's
-daily log return over a clean estimation window of $[t-120, t-21]$ trading days —
-i.e. the four-ish months *before* the event, well clear of the action:
+That baseline is the **market model** — and despite the fancy name, the idea is
+simple. On a normal day, a stock mostly just rides the broad market, plus a bit
+of its own wiggle. If the S&P is up 1% and a particular stock tends to move about
+1.2-for-1 with it, then "expected" is roughly +1.2% that day; anything beyond
+that is the stock doing something of its own. Every stock has its own personal
+relationship to the market — some amplify its moves, some barely budge — so the
+first step is to *measure* that relationship for each one.
+
+The way you measure it is a regression: fit the straight line that best relates
+the stock's daily return to the S&P 500's daily return, using a clean window of
+data from *before* the event — here, the trading days from $[t-120, t-21]$, i.e.
+the four-ish months leading up to it but stopping well short of the action:
 
 $$
 r_{i,\tau} = \alpha_i + \beta_i \, r_{m,\tau} + \varepsilon_{i,\tau}, \quad \tau \in [-120, -21]
