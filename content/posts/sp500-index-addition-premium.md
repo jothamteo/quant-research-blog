@@ -7,39 +7,60 @@ tags: ["event-study", "equities", "index-effects", "reproducible-research"]
 summary: "The classic 'index-addition premium' — the run-up in a stock's price in the days before it joins the S&P 500 — has been documented for decades. I replicate it on 204 events from 2000-2022 using a Brown-Warner market-model event study, and find that it has compressed to essentially zero in the post-2010 era."
 ---
 
-For decades the academic literature has documented an **index-addition premium**:
-when a stock is announced as joining the S&P 500, its price runs up in the days
-before it actually enters the index, and index-tracking funds end up paying that
-premium when they buy on the effective date.[^petajisto] The most-cited estimates
-put the run-up at **3-8%** in the 1990s and early 2000s.[^chen][^denis]
+Imagine you knew, a week in advance, that a buyer was about to walk into the
+market — one who *had* to buy a particular stock, in size, regardless of price.
+Not because they think it's cheap, but because a rule says they must. What would
+you do?
 
-If that effect were still alive, it would imply a recurring drag on every
-S&P 500 index fund. So an honest question is: **is it still there?**
+You'd probably buy it first, and sell it to them when they show up.
 
-To find out, I ran a standard Brown-Warner market-model event study[^brown_warner]
-on **204 S&P 500 additions between 2000 and 2022**, using only public data and
-free Python tooling. The full code is on
-[GitHub](https://github.com/jothamteo/quant-research-blog/tree/main/code/sp500_index_addition_premium).
+That, in one sentence, is the **index-addition premium**. When S&P announces
+that a stock is joining the S&P 500, every index fund tracking the index becomes
+a forced buyer on the day the change takes effect — they have to hold the stock,
+at whatever price the market sets. For years, the academic literature documented
+exactly what you'd expect: the price ran up in the days *before* inclusion, and
+the index funds paid that premium when they finally bought.[^petajisto] The
+most-cited estimates put the run-up at **3-8%** in the 1990s and early
+2000s.[^chen][^denis] That's a real, recurring cost paid by anyone who owns an
+index fund.
 
-**Headline result.** The cumulative abnormal return (CAR) over the 5 trading days
-ending on the effective date averaged **+325 basis points pre-2010** but **−21
-basis points post-2010**. The difference of **346 bps is statistically significant
-(t = 3.02, p = 0.005)**. The premium hasn't merely shrunk — it has disappeared.
+So here's the honest question: **is it still there?** A pattern that obvious,
+that well-documented, and that profitable to front-run is exactly the kind of
+thing markets tend to compete away. Let's check.
+
+I ran a standard Brown-Warner market-model event study[^brown_warner] on **204
+S&P 500 additions between 2000 and 2022**, using only public data and free Python
+tooling. The full code is on
+[GitHub](https://github.com/jothamteo/quant-research-blog/tree/main/code/sp500_index_addition_premium)
+— you can rerun every number in this post yourself.
+
+**The short version.** The run-up over the 5 trading days ending on inclusion
+averaged **+325 basis points before 2010** but **−21 basis points after 2010**.
+That difference — 346 bps — is statistically significant (t = 3.02, p = 0.005).
+The premium hasn't just shrunk. It's gone.
 
 ![CAR run-up by era](/quant-research-blog/charts/sp500-addition-premium/car_runup_by_era.png)
 
-## Method
+## How I measured it
 
-For each addition event with effective date $t = 0$, I fit a market-model
-regression of the stock's daily log return on the S&P 500's daily log return
-over an estimation window of $[t-120, t-21]$ trading days:
+The tricky part of a claim like "the stock ran up 3%" is the obvious follow-up:
+*ran up compared to what?* Over any given week the whole market drifts around,
+and a stock that happens to get added to the index might have been rising anyway.
+So before we can say a move is *abnormal*, we need a baseline for what's normal.
+
+That baseline is the **market model**. For each addition event with effective
+date $t = 0$, I fit a regression of the stock's daily log return on the S&P 500's
+daily log return over a clean estimation window of $[t-120, t-21]$ trading days —
+i.e. the four-ish months *before* the event, well clear of the action:
 
 $$
 r_{i,\tau} = \alpha_i + \beta_i \, r_{m,\tau} + \varepsilon_{i,\tau}, \quad \tau \in [-120, -21]
 $$
 
-I then use $\hat\alpha_i$ and $\hat\beta_i$ to compute **abnormal returns** in the
-event window $[-10, +20]$:
+In plain terms: this regression learns how the stock normally moves with the
+market. Once we know that, the **abnormal return** on any day is just the part of
+the stock's move the market *doesn't* explain — the bit that's specific to the
+stock. I compute it across the event window $[-10, +20]$:
 
 $$
 \mathrm{AR}_{i,\tau} = r_{i,\tau} - \big(\hat\alpha_i + \hat\beta_i \, r_{m,\tau}\big)
@@ -95,9 +116,10 @@ flat through the effective date and drifts mildly negative afterwards. There is
 nothing left to capture by the time index funds buy on $t=0$, because everyone
 who was going to has already bought between announcement and effective.
 
-## Why has it disappeared?
+## So why did it vanish?
 
-Three reasons that the literature has been converging on:
+The honest answer is that a free lunch this well-advertised was never going to
+last. Three forces the literature keeps coming back to:
 
 1. **Anticipated demand has been arbitraged out.** S&P announces additions
    typically 5-7 trading days before the effective date. That is more than
