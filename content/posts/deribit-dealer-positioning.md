@@ -112,6 +112,38 @@ The honest version of the chart in a portfolio piece is what I built:
 implement the canonical sign, do the analytics correctly *given* that
 sign, and put the limitation in front of the reader.
 
+## How to actually read the GEX chart
+
+So — caveats noted — what do you *do* with it? Open the GEX panel and the one
+number to find is the **zero-gamma flip**: the spot level where aggregate dealer
+gamma crosses from positive to negative.
+
+![Reading the GEX chart](/quant-research-blog/charts/deribit-dealer-positioning/gex_reading.png)
+
+Here's the read, and it's the whole reason the chart is worth looking at:
+
+- **Spot trading *above* the flip** → dealers are net long gamma. To stay hedged
+  they lean *against* the move: selling into rallies, buying dips. That's a
+  stabilising, mean-reverting regime — ranges tend to hold, realised vol stays
+  pinned. The practical lean: fading extremes and selling premium has the wind at
+  its back; don't expect a clean trend day.
+- **Spot trading *below* the flip** → dealers are net short gamma and hedge *with*
+  the move: buying as it rises, selling as it falls. That's a destabilising,
+  trend-amplifying regime — the same headline can produce a much bigger candle.
+  The practical lean: respect breakouts, give trends room, and be wary of selling
+  options into it.
+- **The largest GEX bars by strike** mark the heaviest hedging anchors — the
+  strikes around which dealer rebalancing concentrates. Those levels often act as
+  near-term magnets or walls.
+
+Two honesties keep this from being a money-printer. First, all of the above
+*assumes the SqueezeMetrics sign holds* — and we just saw it's shakier on Deribit
+than on the S&P. Treat the flip as a hypothesis to confirm against price action,
+not gospel. Second, even where the sign is right, the magnitudes shift as the
+book updates, so the flip level moves: it's a same-day read, not a set-and-forget
+level. What I trust most here is the **distribution of gamma across strikes**
+(where the anchors are) — that part is sign-independent.
+
 ## SVI: why it's the right object to fit
 
 The other workhorse calculation in the dashboard is the
@@ -127,63 +159,56 @@ Five parameters per expiry: $a$ (overall level), $b$ (wing slope), $\rho$
 (asymmetry / put-vs-call skew), $m$ (centre), $\sigma$ (smoothness near
 the centre).
 
-Why fit a parametric form at all rather than just linearly interpolating
-the market IVs? Three reasons that are non-negotiable in practice.
+Why bother fitting a curve instead of just connecting the market IVs with
+straight lines? Because a *fitted* smile is one you can trust at the edges and
+between the strikes. SVI's parameters can be constrained so the smile is
+guaranteed arbitrage-free, its wings behave the way option theory says they
+must,[^lee] and you get a clean ATM reading even when no listed strike sits
+exactly at-the-money (common on Deribit). Naive interpolation gives none of
+those guarantees and quietly produces garbage skew and butterfly numbers in the
+wings. The [methodology doc](https://jothamteo.github.io/deribit-options-dashboard/docs/methodology.html)
+has the full fit, the constraint penalties, and the test suite if you want to
+audit it.
 
-1. **No-arbitrage constraints are explicit.** The SVI form is convex in
-   $k$ when $b \ge 0$, $|\rho| < 1$, $\sigma > 0$, and
-   $a + b\sigma\sqrt{1 - \rho^2} \ge 0$. As long as the optimiser respects
-   those four constraints (the dashboard's optimiser uses a soft-penalty
-   Nelder-Mead implementation that I wrote and tested) the fit is
-   guaranteed to be a no-static-arbitrage smile. Linear-interpolation
-   between market IVs is *not*.
+## How to read the skew for an edge
 
-2. **ATM IV is well-defined.** Deribit's listed strike grid doesn't
-   always include the forward exactly, so the at-the-money mark is not
-   always on a listed strike. Evaluating the SVI at $k = 0$ gives a
-   smooth, parameter-consistent ATM IV for term-structure plots. Linear
-   interpolation in IV between the two nearest strikes is asymptotically
-   identical but loses the no-arbitrage guarantee.
+Here's the part I trust *more* than the GEX flip, because none of it depends on
+guessing the dealer sign — it falls straight out of option prices. Once the smile
+is fitted, two numbers summarise it, and both are live on the dashboard:
 
-3. **The wing behaviour is dictated by theory.** Lee's moment formula[^lee]
-   constrains the asymptotic slope of total variance as $|k| \to \infty$.
-   SVI naturally has the asymptotic form $w(k) \sim |k| \cdot b(1 \pm \rho)$,
-   which is exactly what Lee predicts. Fits that don't have this
-   asymptotic shape (e.g. cubic splines) extrapolate badly into deep OTM
-   wings and produce spurious skew or butterfly numbers.
+![Reading the skew](/quant-research-blog/charts/deribit-dealer-positioning/skew_reading.png)
 
-The methodology doc derives the fit, the constraint penalties, and the
-seeding strategy in full and links to the test suite that benchmarks the
-output against textbook examples.
+- **25-delta risk-reversal (RR)** = the IV of the 25Δ call minus the 25Δ put. It's
+  the market's *directional* lean priced in vol. Deeply negative RR (puts much
+  richer than calls) means traders are paying up for downside protection — fear.
+  Positive RR means they're chasing upside — euphoria. The *level* matters less
+  than the *change*: a sharp swing in RR is positioning rotating, often ahead of
+  spot. A read: when downside is already extremely bid, the marginal put is
+  expensive insurance, and skew tends to mean-revert.
+- **25-delta butterfly (BF)** = the average of the wing IVs minus the ATM IV — how
+  much extra the market charges for *big moves in either direction*. A rich
+  butterfly says the market is bracing for a fat tail; a flat one says it expects
+  a quiet grind. If you think the coming move is smaller than the butterfly
+  implies, the wings are where you'd sell; if larger, where you'd buy.
+- **The ATM term structure** (ATM IV across expiries) tells you *when* the market
+  expects the action. Upward-sloping (contango) is the calm default — near-dated
+  vol cheap, longer-dated richer. When the front end spikes *above* the back
+  (backwardation), the market is pricing an imminent event; that inversion is
+  itself the signal.
 
-## What the dashboard is *not* doing
+Because all three come from the fitted prices rather than an assumed dealer
+position, they're the readings I'd lean on hardest for an actual BTC options
+trade.
 
-Three things worth flagging explicitly because they are easy assumptions
-to make if you've only used the dashboard from the outside.
+## Two things it deliberately doesn't do
 
-1. **No risk-free rate.** $r$ and $q$ are both set to zero in the
-   Black-Scholes calculation. The methodology doc explains why: there is
-   no canonical crypto risk-free rate, perpetual funding is too noisy to
-   use as a substitute, and the alternative — encoding the cost of carry
-   into the *forward* curve computed from listed Deribit futures — is
-   cleaner and more defensible than picking an arbitrary rate. The cost
-   of carry shows up in $F$, where it belongs, not in $r$.
-
-2. **No flow-decomposition.** The dashboard does not attempt to estimate
-   dealer position from observed maker-quoting behaviour. Doing that
-   credibly requires either trade-by-trade taker-vs-maker flag data (which
-   Deribit's public API doesn't provide at strike granularity) or a
-   structural model of market-maker inventory dynamics. Both are out of
-   scope for a static portfolio piece. The GEX chart presents the
-   *canonical-sign* dealer-positioning picture; reading anything more
-   into it is the operator's call, not the dashboard's claim.
-
-3. **No realised-volatility benchmark.** A natural addition would be a
-   "realised vol vs implied vol" rolling time-series, which would put the
-   SVI fit's ATM IV in context. I haven't added it because Deribit's
-   public API has a 30-second rate budget that I'm using for the
-   live-book pull; adding a 30-day spot history pull would change the
-   request shape. It's on the list.
+So you don't over-read it: the dashboard sets the risk-free rate to zero (there's
+no canonical one in crypto — the cost of carry lives in the *forward* computed
+from listed futures, which is cleaner than inventing a rate), and it makes **no
+attempt to infer the true dealer position from flow**. Estimating who's really
+short which strikes needs trade-level taker/maker data the public API doesn't
+expose. So the GEX chart shows the *canonical-sign* picture and no more — reading
+conviction into the sign is your call, not the dashboard's claim.
 
 ## Pragmatic reading guide
 
@@ -205,23 +230,16 @@ informative because the *shape* of $\text{pain}(S^*)$ across candidate
 strikes tells you where dealer / writer P&L is anchored, regardless of
 whether spot actually pins.
 
-## Take-aways
+## The bottom line
 
-- Browser-only options analytics on a public API is a perfectly viable
-  portfolio-piece pattern: no backend cost, full reproducibility, and the
-  methodology doc plus the test suite make the implementation auditable
-  by anyone.
-- The dashboard correctly implements the canonical SqueezeMetrics GEX
-  sign. *Correctly* does not mean *for-Deribit-trustworthy* — it means
-  *consistent with the published canonical assumption*, which is the
-  honest baseline.
-- The SVI fit is the more reliably useful object: skew and butterfly
-  numbers are sign-independent, smile shape is invariant to my $r = 0$
-  choice, and the no-arbitrage constraints are explicit.
-- The biggest open improvement is empirical estimation of dealer
-  positioning from Deribit's actual flow rather than borrowing the SPX
-  sign. I haven't done it because it needs richer data than the public
-  API exposes.
+So, what does the SqueezeMetrics sign assumption actually buy you on Deribit? A
+**direction-of-regime hypothesis** — a flip level and a long/short-gamma read
+that's genuinely useful *if* the sign holds, and that you should treat as a
+hypothesis to confirm against price, not a law. The parts that don't depend on
+that assumption — where gamma is concentrated by strike, and the whole skew
+complex (risk-reversal, butterfly, term structure) — are what I'd actually lean
+on for a trade. Read in that order of trust, the dashboard earns its place: GEX
+for the regime *story*, skew for the *signal*.
 
 For the live dashboard:
 [jothamteo.github.io/deribit-options-dashboard](https://jothamteo.github.io/deribit-options-dashboard/).
