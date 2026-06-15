@@ -1,6 +1,6 @@
 baseURL: "https://jothamteo.github.io/quant-research-blog/"
 locale: "en-us"
-title: "Jotham Teo — Quant Research"
+title: "Marked to Madness"
 theme: "PaperMod"
 
 enableInlineShortcodes: true
@@ -23,8 +23,8 @@ pagination:
 
 params:
   env: production
-  title: "Jotham Teo — Quant Research"
-  description: "Reproducible, honest quantitative research on equities, options, and crypto microstructure."
+  title: "Marked to Madness"
+  description: "A developer at Pictet writing honest, reproducible quant research — testing the market claims everyone repeats but few people actually check."
   author: "Jotham Teo"
   defaultTheme: "auto"
   disableThemeToggle: false
@@ -42,15 +42,18 @@ params:
   ShowRssButtonInSectionTermList: true
 
   homeInfoParams:
-    Title: "Jotham Teo"
+    Title: "Marked to Madness"
     Content: |
-      Quantitative research with rigour, honesty, and reproducible code.
+      Hi, I'm Jotham — a developer at Pictet by day, quant researcher the rest of
+      the time. This is where I take the market claims everyone repeats but few
+      people actually check, and put them on the bench: does that "edge" survive
+      transaction costs? Has that textbook anomaly quietly died? When the data
+      disagrees with the popular story, I show you the data.
 
-      MSc Quantitative Finance. Background in finance and software. I write about
-      what the data actually says — including when it disagrees with popular claims.
-
-      Each post links to the analysis code on GitHub. Methodologies are documented,
-      assumptions are stated, limitations are not buried.
+      MSc Quantitative Finance, with a background spanning finance and software.
+      Expect plain-English explanations, honest results (including the dull ones
+      and the dead ends), and every chart backed by code you can rerun yourself
+      on GitHub.
 
   socialIcons:
     - name: github

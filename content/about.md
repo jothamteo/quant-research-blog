@@ -6,11 +6,13 @@ ShowToc: false
 hidemeta: true
 ---
 
-I'm Jotham Teo — a quantitative researcher with a background in finance and
-software engineering, currently completing an MSc in Quantitative Finance.
+I'm Jotham Teo — a developer at [Pictet](https://www.pictet.com/) by day and a
+quantitative researcher the rest of the time, with an MSc in Quantitative
+Finance and a background spanning finance and software.
 
-This blog exists for one reason: to do quantitative research **rigorously and
-honestly**, in public.
+**Marked to Madness** exists for one reason: to do quantitative research
+**rigorously and honestly**, in public — and to actually check the market
+claims everyone repeats but few people test.
 
 ### What you'll find here
 
