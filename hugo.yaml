@@ -108,6 +108,18 @@ markup:
   goldmark:
     renderer:
       unsafe: true
+    extensions:
+      # Leave $...$ and $$...$$ untouched by Markdown so KaTeX gets clean LaTeX
+      # (otherwise Goldmark reads underscores as italics and breaks the math).
+      passthrough:
+        enable: true
+        delimiters:
+          block:
+            - ["$$", "$$"]
+            - ["\\[", "\\]"]
+          inline:
+            - ["$", "$"]
+            - ["\\(", "\\)"]
 
 outputs:
   home:
