@@ -7,10 +7,19 @@ tags: ["prediction-markets", "calibration", "scoring-rules", "manifold", "empiri
 summary: "I pulled 5,125 resolved binary markets from Manifold and ran a standard reliability-diagram and scoring-rule analysis. The headline: markets at their closing probability are well-calibrated — almost perfectly so above $1,000 in volume — and beat both a 50% prior and a base-rate baseline by a factor of three on the Brier score. I also report where the calibration fails and what the result does and does not buy you."
 ---
 
-A common claim about prediction markets is that they aggregate
-information into well-calibrated probabilities: when the market says
-*"70%"*, those events should happen roughly seven times out of ten.
-The claim is testable. This post tests it.
+When your weather app says "70% chance of rain," what does that number actually
+mean? It isn't a promise. It's a claim about a track record: across all the days
+the app calls "70%," it should actually rain on about seven of every ten. If it
+rains on nine, the app was underconfident; if three, overconfident. A forecaster
+you can trust is one whose 70% days rain 70% of the time. That property has a
+name — **calibration** — and the satisfying thing about it is that you don't have
+to take anyone's word for it. You just keep score.
+
+Prediction markets make exactly this kind of claim. When a market trades at 70
+cents for a "yes" share, it's implicitly forecasting a 70% chance. People love to
+say markets are wise — that they aggregate everyone's information into a sharp
+probability. Maybe. But it's a testable claim, and almost nobody bothers to keep
+score. So I did.
 
 I pulled the **5,125 most recent resolved BINARY markets** from
 [Manifold Markets](https://manifold.markets/) (resolution ∈ {YES, NO},

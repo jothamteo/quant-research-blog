@@ -7,21 +7,28 @@ tags: ["methodology", "event-study", "linear-algebra", "statistics", "explainer"
 summary: "The Brown-Warner market model is the workhorse of event-study research, but it is often presented as a recipe rather than as a piece of statistics. This post walks through the linear algebra and the statistics behind it — from the per-event OLS to the cumulative-abnormal-return test statistic — and uses a worked synthetic example to show the methodology recovering a planted effect."
 ---
 
-In an earlier [post](/quant-research-blog/posts/sp500-index-addition-premium/)
-I used a Brown-Warner market-model event study to ask whether the S&P 500
-index-addition premium has disappeared. That post took the methodology on
-trust. This post explains it.
+A marketing manager runs a big campaign in March. Sales jump 10%. Did the
+campaign work? You can't answer from that number alone — March was also the start
+of spring, a competitor had a stockout, and the whole category was up anyway. To
+give the campaign credit you need a baseline: what would sales have done *without*
+it? The campaign's real effect is the part of the jump your baseline can't
+explain.
 
-The goal here is the same one the original Brown and Warner (1985)[^bw1985]
-paper had: to be *sure* that when you report a cumulative abnormal return
-("CAR") with a *t*-statistic, you actually know
+That question — how much of a move is genuinely due to the event, versus what
+would have happened regardless — is the entire problem an **event study** solves.
+In finance the "event" is an earnings surprise, an index addition, a rating
+change; the "sales jump" is the stock's return around it; and the baseline is how
+the stock normally moves with the market. Get the baseline right and you can put
+a number, and a confidence interval, on the event's true effect.
 
-1. what null hypothesis the *t*-statistic is testing,
-2. what assumptions you are making about the data, and
-3. where those assumptions are likely to bite in practice.
-
-We will get to a worked synthetic example at the end where the methodology
-recovers a planted +50 basis-point one-day abnormal return from noise.
+In an earlier [post](/quant-research-blog/posts/sp500-index-addition-premium/) I
+leaned on this machinery to ask whether the S&P 500 index-addition premium has
+disappeared — but I took the method on trust. This post opens the box. By the
+end you'll know exactly what you're claiming when you report a cumulative
+abnormal return ("CAR") with a *t*-statistic: what hypothesis it tests, what it
+assumes, and where those assumptions bite. We finish with a worked example where
+the method recovers a planted +50 basis-point effect out of pure noise — the
+cleanest way to prove a recipe actually works.
 
 ## 1. The market model in matrix form
 

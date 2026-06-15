@@ -7,30 +7,43 @@ tags: ["options", "microstructure", "deribit", "gex", "svi", "btc"]
 summary: "I built a browser-only Deribit BTC options dashboard that fits Gatheral SVI per expiry, computes dealer gamma exposure under the SqueezeMetrics canonical sign convention, and surfaces 25-delta risk-reversal, butterfly and max-pain. This is the post explaining what the dashboard is reading and where the dealer-positioning story actually holds up vs. where it is borrowed faith."
 ---
 
-For the last few months I've been working on a small browser-only options
-dashboard for Deribit BTC: [jothamteo.github.io/deribit-options-dashboard](https://jothamteo.github.io/deribit-options-dashboard/).
-The dashboard does what the standard equity-options analytics tools do —
-fits a [Gatheral SVI](https://www.researchgate.net/publication/267839486_A_parsimonious_arbitrage-free_implied_volatility_parameterization_with_application_to_the_valuation_of_volatility_derivatives)
+Think about the thermostat in your house. When the room gets too warm it kicks
+on the cooling; too cold, the heat. It pushes *against* whatever's happening, and
+the result is a room that stays roughly stable. Now imagine someone reversed the
+wiring — it cranks the heat when the room is already hot and blasts cold when
+it's freezing. Same machine, opposite sign, and suddenly every little
+fluctuation gets amplified into a swing.
+
+Options dealers are a giant thermostat wired into the market. The banks and
+market-makers who sell options have to constantly buy and sell the underlying to
+stay hedged, and which way they're "wired" — quietly dampening the day's moves or
+amplifying them — comes down to one number: their **gamma**. Reading that number
+is the single most useful thing my browser-only Deribit BTC options dashboard
+tries to do: [jothamteo.github.io/deribit-options-dashboard](https://jothamteo.github.io/deribit-options-dashboard/).
+
+Under the hood it does what the standard equity-options tools do — fits a
+[Gatheral SVI](https://www.researchgate.net/publication/267839486_A_parsimonious_arbitrage-free_implied_volatility_parameterization_with_application_to_the_valuation_of_volatility_derivatives)
 volatility surface per expiry, computes dealer
 [gamma exposure (GEX)](https://squeezemetrics.com/download/The_Implied_Order_Book_and_Gamma_Exposure.pdf)
-across the book, shows the 25-delta risk-reversal and butterfly term
-structures, and finds max-pain per expiry. Everything is recomputed
-locally from the Deribit public API every 30 seconds. The full methodology
-document is at [docs/methodology.html](https://jothamteo.github.io/deribit-options-dashboard/docs/methodology.html).
-
-The methodology document is the *what*. This post is the *why* and,
-more importantly, the *how-much-do-we-trust-it*. Two questions matter.
+across the book, and shows 25-delta risk-reversal, butterfly, and max-pain per
+expiry — all recomputed locally from the Deribit public API every 30 seconds.
+The [methodology doc](https://jothamteo.github.io/deribit-options-dashboard/docs/methodology.html)
+is the *what*. This post is the *why*, and — more importantly — the
+*how-much-should-you-trust-it*, because porting this idea from stocks to crypto
+quietly breaks one of its load-bearing assumptions.
 
 ## What dealer GEX is actually measuring
 
-If you sell options to end-users, you are short option gamma. To stay
+Back to the thermostat. If you sell options to end-users, you are short option
+gamma. To stay
 delta-neutral as spot moves, you buy when spot rises and sell when spot
 falls. Your *aggregate* gamma — the second derivative of your portfolio
 value with respect to spot — determines how much rebalancing you do per
 1% move in spot. **Negative aggregate gamma** means you rebalance in the
 *same* direction as spot moves (buy high, sell low), which amplifies
-intraday volatility. **Positive aggregate gamma** means you rebalance
-against the spot move, which dampens it.
+intraday volatility — the reversed thermostat. **Positive aggregate gamma**
+means you rebalance against the spot move, which dampens it — the thermostat
+working as intended.
 
 The dashboard's GEX number is the dollar-gamma per 1% spot move,
 aggregated across every live option at every strike. The per-option

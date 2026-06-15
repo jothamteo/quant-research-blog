@@ -7,12 +7,23 @@ tags: ["crypto", "perpetuals", "carry-trade", "funding-rate", "btc", "backtest"]
 summary: "The canonical 'short perp / long spot' carry trade on BTCUSDT delivered +7.4% annualised funding-only PnL over the last three years on Binance. The headline Sharpe of 15 is meaningless on its own. This post backtests the trade, reports what the data actually show, and itemises the risks that the headline number ignores."
 ---
 
-A common crypto-Twitter claim is that you can earn the perpetual funding
-rate as a delta-neutral carry trade: short the perp, long the spot, collect
-the funding payments. The literature is sparse, the practitioner essays
-are hype-laden, and the headline numbers tend to be reported without the
-risks attached. This post runs the trade on three years of Binance data
-and reports both the headline and the honest version.
+Picture being a landlord. Every month the rent lands in your account — steady,
+boring, reliable. On paper it looks close to free money: you own the asset,
+someone else pays you for the privilege of using it. But ask any actual landlord
+and they'll tell you the rent cheque isn't the whole story. There's the month the
+boiler dies, the tenant who stops paying, the year the neighbourhood's prices
+crater while your mortgage payment stays exactly the same. The yield on the
+brochure and the yield you actually live with are two different numbers.
+
+Crypto has a trade that feels a lot like being a landlord — and it comes with the
+same gap between the headline yield and the lived experience. It's all over
+crypto-Twitter: short the perpetual future, hold the spot against it, and collect
+the **funding rate** that leveraged longs pay, every eight hours, for the
+privilege of staying long. Delta-neutral, market-neutral, "free" carry. The
+pitch usually stops at the headline number and skips the boiler.
+
+So let's run it properly — three years of real Binance data — and report both
+the brochure yield *and* the one you'd actually live with.
 
 **Headline**: short 1 BTC of BTCUSDT perp, long 1 BTC of BTCUSDT spot,
 hold from 2023-06-07 to 2026-06-11. Over **3,300 eight-hour funding
@@ -77,9 +88,10 @@ prior: BTC perpetuals are in *contango* almost permanently because long
 demand exceeds short demand at the margin. The trade is asymmetric — the
 short side of the basis is where the systematic edge sits.
 
-## 3. The honest risk picture (i.e. why a Sharpe of 15 is misleading)
+## 3. Now the boiler — why a Sharpe of 15 is misleading
 
-The 15.3 Sharpe number is the Sharpe **of the funding-only PnL series
+This is the part of the brochure they leave off. The 15.3 Sharpe number is the
+Sharpe **of the funding-only PnL series
 under the assumption that the spot and perp legs perfectly offset each
 other**. That assumption ignores at least five real risks. The trade *does*
 work in practice, but the realistic Sharpe is somewhere in the 3-6 range
