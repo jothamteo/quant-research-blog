@@ -15,3 +15,8 @@ code/funding_rate_carry/data/spot_btcusdt.csv
 
 # Prediction-market generated data
 code/prediction_market_calibration/data/resolved_markets.csv
+
+# World Cup models: big re-downloadable history + raw timestamped snapshots.
+# The small baked outputs (results.json, groups_2026.json, market_snapshot_latest.json) ARE committed.
+code/world_cup_models/data/results.csv
+code/world_cup_models/data/market_snapshot_2*.json

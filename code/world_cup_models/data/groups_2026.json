@@ -1,0 +1,200 @@
+{
+ "groups_codes": {
+  "A": [
+   "MEX",
+   "RSA",
+   "KOR",
+   "CZE"
+  ],
+  "B": [
+   "CAN",
+   "BIH",
+   "QAT",
+   "SUI"
+  ],
+  "C": [
+   "BRA",
+   "MAR",
+   "HAI",
+   "SCO"
+  ],
+  "D": [
+   "USA",
+   "PAR",
+   "AUS",
+   "TUR"
+  ],
+  "E": [
+   "GER",
+   "CUW",
+   "CIV",
+   "ECU"
+  ],
+  "F": [
+   "NED",
+   "JPN",
+   "SWE",
+   "TUN"
+  ],
+  "G": [
+   "BEL",
+   "EGY",
+   "IRN",
+   "NZL"
+  ],
+  "H": [
+   "ESP",
+   "CPV",
+   "KSA",
+   "URU"
+  ],
+  "I": [
+   "FRA",
+   "SEN",
+   "IRQ",
+   "NOR"
+  ],
+  "J": [
+   "ARG",
+   "ALG",
+   "AUT",
+   "JOR"
+  ],
+  "K": [
+   "POR",
+   "COD",
+   "UZB",
+   "COL"
+  ],
+  "L": [
+   "ENG",
+   "CRO",
+   "GHA",
+   "PAN"
+  ]
+ },
+ "code2name": {
+  "MEX": "Mexico",
+  "RSA": "South Africa",
+  "KOR": "South Korea",
+  "CZE": "Czech Republic",
+  "CAN": "Canada",
+  "BIH": "Bosnia and Herzegovina",
+  "QAT": "Qatar",
+  "SUI": "Switzerland",
+  "BRA": "Brazil",
+  "MAR": "Morocco",
+  "HAI": "Haiti",
+  "SCO": "Scotland",
+  "USA": "United States",
+  "PAR": "Paraguay",
+  "AUS": "Australia",
+  "TUR": "Turkey",
+  "GER": "Germany",
+  "CUW": "Cura\u00e7ao",
+  "CIV": "Ivory Coast",
+  "ECU": "Ecuador",
+  "NED": "Netherlands",
+  "JPN": "Japan",
+  "SWE": "Sweden",
+  "TUN": "Tunisia",
+  "BEL": "Belgium",
+  "EGY": "Egypt",
+  "IRN": "Iran",
+  "NZL": "New Zealand",
+  "ESP": "Spain",
+  "CPV": "Cape Verde",
+  "KSA": "Saudi Arabia",
+  "URU": "Uruguay",
+  "FRA": "France",
+  "SEN": "Senegal",
+  "IRQ": "Iraq",
+  "NOR": "Norway",
+  "ARG": "Argentina",
+  "ALG": "Algeria",
+  "AUT": "Austria",
+  "JOR": "Jordan",
+  "POR": "Portugal",
+  "COD": "DR Congo",
+  "UZB": "Uzbekistan",
+  "COL": "Colombia",
+  "ENG": "England",
+  "CRO": "Croatia",
+  "GHA": "Ghana",
+  "PAN": "Panama"
+ },
+ "groups": {
+  "A": [
+   "Mexico",
+   "South Africa",
+   "South Korea",
+   "Czech Republic"
+  ],
+  "B": [
+   "Canada",
+   "Bosnia and Herzegovina",
+   "Qatar",
+   "Switzerland"
+  ],
+  "C": [
+   "Brazil",
+   "Morocco",
+   "Haiti",
+   "Scotland"
+  ],
+  "D": [
+   "United States",
+   "Paraguay",
+   "Australia",
+   "Turkey"
+  ],
+  "E": [
+   "Germany",
+   "Cura\u00e7ao",
+   "Ivory Coast",
+   "Ecuador"
+  ],
+  "F": [
+   "Netherlands",
+   "Japan",
+   "Sweden",
+   "Tunisia"
+  ],
+  "G": [
+   "Belgium",
+   "Egypt",
+   "Iran",
+   "New Zealand"
+  ],
+  "H": [
+   "Spain",
+   "Cape Verde",
+   "Saudi Arabia",
+   "Uruguay"
+  ],
+  "I": [
+   "France",
+   "Senegal",
+   "Iraq",
+   "Norway"
+  ],
+  "J": [
+   "Argentina",
+   "Algeria",
+   "Austria",
+   "Jordan"
+  ],
+  "K": [
+   "Portugal",
+   "DR Congo",
+   "Uzbekistan",
+   "Colombia"
+  ],
+  "L": [
+   "England",
+   "Croatia",
+   "Ghana",
+   "Panama"
+  ]
+ }
+}

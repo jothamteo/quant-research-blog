@@ -1,0 +1,549 @@
+{
+  "fetched_at_utc": "2026-06-17T08:05:51.591698+00:00",
+  "match_days": [
+    "2026-06-17",
+    "2026-06-18"
+  ],
+  "pm_champion": [
+    {
+      "team": "Spain",
+      "yes_price": 0.1325
+    },
+    {
+      "team": "New Zealand",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Switzerland",
+      "yes_price": 0.0085
+    },
+    {
+      "team": "England",
+      "yes_price": 0.1045
+    },
+    {
+      "team": "France",
+      "yes_price": 0.1845
+    },
+    {
+      "team": "South Korea",
+      "yes_price": 0.0035
+    },
+    {
+      "team": "Haiti",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Brazil",
+      "yes_price": 0.0665
+    },
+    {
+      "team": "Jordan",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Cura\u00e7ao",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Argentina",
+      "yes_price": 0.1055
+    },
+    {
+      "team": "Germany",
+      "yes_price": 0.0565
+    },
+    {
+      "team": "Colombia",
+      "yes_price": 0.0155
+    },
+    {
+      "team": "Iran",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Portugal",
+      "yes_price": 0.1015
+    },
+    {
+      "team": "Ghana",
+      "yes_price": 0.0015
+    },
+    {
+      "team": "Netherlands",
+      "yes_price": 0.0445
+    },
+    {
+      "team": "Algeria",
+      "yes_price": 0.0015
+    },
+    {
+      "team": "Bosnia-Herzegovina",
+      "yes_price": 0.0015
+    },
+    {
+      "team": "Italy",
+      "yes_price": 0.0
+    },
+    {
+      "team": "USA",
+      "yes_price": 0.0225
+    },
+    {
+      "team": "Canada",
+      "yes_price": 0.0025
+    },
+    {
+      "team": "Turkiye",
+      "yes_price": 0.0045
+    },
+    {
+      "team": "Uruguay",
+      "yes_price": 0.0065
+    },
+    {
+      "team": "Mexico",
+      "yes_price": 0.0145
+    },
+    {
+      "team": "Paraguay",
+      "yes_price": 0.0015
+    },
+    {
+      "team": "Scotland",
+      "yes_price": 0.0025
+    },
+    {
+      "team": "Peru",
+      "yes_price": 0.0
+    },
+    {
+      "team": "Japan",
+      "yes_price": 0.0165
+    },
+    {
+      "team": "Norway",
+      "yes_price": 0.0255
+    },
+    {
+      "team": "Tunisia",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Ecuador",
+      "yes_price": 0.0045
+    },
+    {
+      "team": "Uzbekistan",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Morocco",
+      "yes_price": 0.0235
+    },
+    {
+      "team": "Panama",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Iraq",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "South Africa",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Senegal",
+      "yes_price": 0.0065
+    },
+    {
+      "team": "Ivory Coast",
+      "yes_price": 0.0055
+    },
+    {
+      "team": "Congo DR",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Cape Verde",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Czechia",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Qatar",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Belgium",
+      "yes_price": 0.0165
+    },
+    {
+      "team": "Australia",
+      "yes_price": 0.0045
+    },
+    {
+      "team": "Saudi Arabia",
+      "yes_price": 0.0005
+    },
+    {
+      "team": "Austria",
+      "yes_price": 0.0045
+    },
+    {
+      "team": "Croatia",
+      "yes_price": 0.0075
+    },
+    {
+      "team": "Egypt",
+      "yes_price": 0.0025
+    },
+    {
+      "team": "Sweden",
+      "yes_price": 0.0055
+    }
+  ],
+  "pm_matches": [
+    {
+      "title": "Portugal vs. DR Congo",
+      "slug": "fifwc-prt-cdr-2026-06-17",
+      "outcomes": [
+        {
+          "label": "DR Congo",
+          "prob": 0.075
+        },
+        {
+          "label": "Portugal",
+          "prob": 0.755
+        },
+        {
+          "label": "Draw (Portugal vs. DR Congo)",
+          "prob": 0.175
+        }
+      ]
+    },
+    {
+      "title": "England vs. Croatia",
+      "slug": "fifwc-eng-hrv-2026-06-17",
+      "outcomes": [
+        {
+          "label": "Croatia",
+          "prob": 0.175
+        },
+        {
+          "label": "England",
+          "prob": 0.565
+        },
+        {
+          "label": "Draw (England vs. Croatia)",
+          "prob": 0.255
+        }
+      ]
+    },
+    {
+      "title": "Ghana vs. Panama",
+      "slug": "fifwc-gha-pan-2026-06-17",
+      "outcomes": [
+        {
+          "label": "Ghana",
+          "prob": 0.415
+        },
+        {
+          "label": "Draw (Ghana vs. Panama)",
+          "prob": 0.295
+        },
+        {
+          "label": "Panama",
+          "prob": 0.295
+        }
+      ]
+    },
+    {
+      "title": "Uzbekistan vs. Colombia",
+      "slug": "fifwc-uzb-col-2026-06-17",
+      "outcomes": [
+        {
+          "label": "Uzbekistan",
+          "prob": 0.095
+        },
+        {
+          "label": "Draw (Uzbekistan vs. Colombia)",
+          "prob": 0.195
+        },
+        {
+          "label": "Colombia",
+          "prob": 0.705
+        }
+      ]
+    },
+    {
+      "title": "Czechia vs. South Africa",
+      "slug": "fifwc-cze-rsa-2026-06-18",
+      "outcomes": [
+        {
+          "label": "Draw (Czechia vs. South Africa)",
+          "prob": 0.255
+        },
+        {
+          "label": "Czechia",
+          "prob": 0.545
+        },
+        {
+          "label": "South Africa",
+          "prob": 0.205
+        }
+      ]
+    },
+    {
+      "title": "Switzerland vs. Bosnia-Herzegovina",
+      "slug": "fifwc-che-bih-2026-06-18",
+      "outcomes": [
+        {
+          "label": "Bosnia-Herzegovina",
+          "prob": 0.145
+        },
+        {
+          "label": "Switzerland",
+          "prob": 0.625
+        },
+        {
+          "label": "Draw (Switzerland vs. Bosnia-Herzegovina)",
+          "prob": 0.235
+        }
+      ]
+    },
+    {
+      "title": "Canada vs. Qatar",
+      "slug": "fifwc-can-qat-2026-06-18",
+      "outcomes": [
+        {
+          "label": "Draw (Canada vs. Qatar)",
+          "prob": 0.165
+        },
+        {
+          "label": "Canada",
+          "prob": 0.755
+        },
+        {
+          "label": "Qatar",
+          "prob": 0.085
+        }
+      ]
+    },
+    {
+      "title": "Mexico vs. Korea Republic",
+      "slug": "fifwc-mex-kr-2026-06-18",
+      "outcomes": [
+        {
+          "label": "Draw (Mexico vs. Korea Republic)",
+          "prob": 0.285
+        },
+        {
+          "label": "Korea Republic",
+          "prob": 0.245
+        },
+        {
+          "label": "Mexico",
+          "prob": 0.485
+        }
+      ]
+    }
+  ],
+  "hl_champion": [
+    {
+      "team": "Algeria",
+      "mid": 0.001675
+    },
+    {
+      "team": "Argentina",
+      "mid": 0.105785
+    },
+    {
+      "team": "Australia",
+      "mid": 0.008125
+    },
+    {
+      "team": "Austria",
+      "mid": 0.003505
+    },
+    {
+      "team": "Belgium",
+      "mid": 0.020825
+    },
+    {
+      "team": "Bosnia and Herzegovina",
+      "mid": 0.00149
+    },
+    {
+      "team": "Brazil",
+      "mid": 0.059875
+    },
+    {
+      "team": "Canada",
+      "mid": 0.001675
+    },
+    {
+      "team": "Cape Verde",
+      "mid": 0.00264
+    },
+    {
+      "team": "Colombia",
+      "mid": 0.01674
+    },
+    {
+      "team": "Congo DR",
+      "mid": 0.000955
+    },
+    {
+      "team": "Croatia",
+      "mid": 0.008255
+    },
+    {
+      "team": "Curacao",
+      "mid": 0.00074
+    },
+    {
+      "team": "Czechia",
+      "mid": 0.0011
+    },
+    {
+      "team": "Ecuador",
+      "mid": 0.00592
+    },
+    {
+      "team": "Egypt",
+      "mid": 0.001565
+    },
+    {
+      "team": "England",
+      "mid": 0.100835
+    },
+    {
+      "team": "France",
+      "mid": 0.18428
+    },
+    {
+      "team": "Germany",
+      "mid": 0.056155
+    },
+    {
+      "team": "Ghana",
+      "mid": 0.002245
+    },
+    {
+      "team": "Haiti",
+      "mid": 0.00065
+    },
+    {
+      "team": "Iran",
+      "mid": 0.001245
+    },
+    {
+      "team": "Iraq",
+      "mid": 0.00258
+    },
+    {
+      "team": "Ivory Coast",
+      "mid": 0.007005
+    },
+    {
+      "team": "Japan",
+      "mid": 0.022045
+    },
+    {
+      "team": "Jordan",
+      "mid": 0.005085
+    },
+    {
+      "team": "Mexico",
+      "mid": 0.01622
+    },
+    {
+      "team": "Morocco",
+      "mid": 0.024035
+    },
+    {
+      "team": "Netherlands",
+      "mid": 0.04467
+    },
+    {
+      "team": "New Zealand",
+      "mid": 0.001435
+    },
+    {
+      "team": "Norway",
+      "mid": 0.0276
+    },
+    {
+      "team": "Panama",
+      "mid": 0.00138
+    },
+    {
+      "team": "Paraguay",
+      "mid": 0.00246
+    },
+    {
+      "team": "Portugal",
+      "mid": 0.11495
+    },
+    {
+      "team": "Qatar",
+      "mid": 0.00491
+    },
+    {
+      "team": "Saudi Arabia",
+      "mid": 0.000815
+    },
+    {
+      "team": "Scotland",
+      "mid": 0.00215
+    },
+    {
+      "team": "Senegal",
+      "mid": 0.006965
+    },
+    {
+      "team": "South Africa",
+      "mid": 0.000745
+    },
+    {
+      "team": "South Korea",
+      "mid": 0.004865
+    },
+    {
+      "team": "Spain",
+      "mid": 0.133835
+    },
+    {
+      "team": "Sweden",
+      "mid": 0.00751
+    },
+    {
+      "team": "Switzerland",
+      "mid": 0.007025
+    },
+    {
+      "team": "Tunisia",
+      "mid": 0.002625
+    },
+    {
+      "team": "Turkey",
+      "mid": 0.005495
+    },
+    {
+      "team": "USA",
+      "mid": 0.026555
+    },
+    {
+      "team": "Uruguay",
+      "mid": 0.007465
+    },
+    {
+      "team": "Uzbekistan",
+      "mid": 0.001395
+    }
+  ]
+}
