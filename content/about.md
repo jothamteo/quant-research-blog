@@ -10,7 +10,7 @@ I'm Jotham Teo — a developer at [Pictet](https://www.pictet.com/) by day and a
 quantitative researcher the rest of the time, with an MSc in Quantitative
 Finance and a background spanning finance and software.
 
-**Marked to Madness** exists for one reason: to do quantitative research
+**Mark to Model** exists for one reason: to do quantitative research
 **rigorously and honestly**, in public — and to actually check the market
 claims everyone repeats but few people test.
 

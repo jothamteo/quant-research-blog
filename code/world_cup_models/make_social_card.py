@@ -34,7 +34,7 @@ fig.patch.set_facecolor(NAVY)
 
 # subtle top band
 band = fig.add_axes([0, 0.93, 1, 0.07]); band.set_facecolor(NAVY2); band.axis("off")
-band.text(0.035, 0.5, "MARKED TO MADNESS", color=GOLD, fontsize=15, fontweight="bold",
+band.text(0.035, 0.5, "MARK TO MODEL", color=GOLD, fontsize=15, fontweight="bold",
           va="center", ha="left", transform=band.transAxes, family="DejaVu Sans")
 band.text(0.965, 0.5, "jothamteo.github.io/quant-research-blog", color=MUTE, fontsize=11,
           va="center", ha="right", transform=band.transAxes)
