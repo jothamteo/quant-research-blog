@@ -1,0 +1,145 @@
+{
+  "regime": [
+    {
+      "bucket": "(-0.001, 20.0]",
+      "n": 593,
+      "mean_edge": -3.7889289455436024,
+      "pct_edge_pos": 38.27993254637437,
+      "mean_dvol_chg": 2.5122091062394603
+    },
+    {
+      "bucket": "(20.0, 35.0]",
+      "n": 341,
+      "mean_edge": -4.966036363954389,
+      "pct_edge_pos": 39.002932551319645,
+      "mean_dvol_chg": 0.9376246334310852
+    },
+    {
+      "bucket": "(35.0, 50.0]",
+      "n": 384,
+      "mean_edge": -11.606755668543828,
+      "pct_edge_pos": 13.020833333333334,
+      "mean_dvol_chg": -2.1841927083333332
+    },
+    {
+      "bucket": "(50.0, 65.0]",
+      "n": 109,
+      "mean_edge": -8.569768356654649,
+      "pct_edge_pos": 22.018348623853214,
+      "mean_dvol_chg": -2.225137614678899
+    },
+    {
+      "bucket": "(65.0, 80.0]",
+      "n": 42,
+      "mean_edge": -20.072518562259454,
+      "pct_edge_pos": 2.380952380952381,
+      "mean_dvol_chg": -17.124761904761904
+    },
+    {
+      "bucket": "(80.0, 100.0]",
+      "n": 50,
+      "mean_edge": -17.782338315767273,
+      "pct_edge_pos": 12.0,
+      "mean_dvol_chg": -13.610400000000002
+    }
+  ],
+  "summary": {
+    "n_total": 1519,
+    "n_cheap": 934,
+    "cheap_frac": 0.615,
+    "cheap_mean_edge": -4.22,
+    "rest_mean_edge": -12.18,
+    "cheap_pct_edge_pos": 38.5,
+    "rest_pct_edge_pos": 13.8,
+    "cheap_mean_dvol_chg": 1.94,
+    "rest_mean_dvol_chg": -4.24,
+    "current_ivrank": 17.6,
+    "current_dvol": 42.4
+  },
+  "deribit_slippage": {
+    "btc_index": 62613,
+    "rows": [
+      {
+        "dte": 0.6,
+        "instrument": "BTC-19JUN26-63000-C",
+        "spread_usd": 37.6,
+        "premium_usd": 300.5,
+        "spread_pct_prem": 12.5
+      },
+      {
+        "dte": 1.6,
+        "instrument": "BTC-20JUN26-62500-C",
+        "spread_usd": 62.6,
+        "premium_usd": 788.9,
+        "spread_pct_prem": 7.9
+      },
+      {
+        "dte": 2.6,
+        "instrument": "BTC-21JUN26-62500-C",
+        "spread_usd": 62.6,
+        "premium_usd": 882.8,
+        "spread_pct_prem": 7.1
+      },
+      {
+        "dte": 3.6,
+        "instrument": "BTC-22JUN26-62500-C",
+        "spread_usd": 31.3,
+        "premium_usd": 1045.6,
+        "spread_pct_prem": 3.0
+      },
+      {
+        "dte": 7.6,
+        "instrument": "BTC-26JUN26-63000-C",
+        "spread_usd": 62.6,
+        "premium_usd": 1327.4,
+        "spread_pct_prem": 4.7
+      },
+      {
+        "dte": 14.6,
+        "instrument": "BTC-3JUL26-63000-C",
+        "spread_usd": 62.6,
+        "premium_usd": 1878.4,
+        "spread_pct_prem": 3.3
+      },
+      {
+        "dte": 21.6,
+        "instrument": "BTC-10JUL26-63000-C",
+        "spread_usd": 31.3,
+        "premium_usd": 2304.1,
+        "spread_pct_prem": 1.4
+      },
+      {
+        "dte": 42.6,
+        "instrument": "BTC-31JUL26-63000-C",
+        "spread_usd": 62.6,
+        "premium_usd": 3312.2,
+        "spread_pct_prem": 1.9
+      }
+    ]
+  },
+  "derive_hype": {
+    "total_hype_options": 748,
+    "by_expiry": [
+      {
+        "expiry": "20260619",
+        "checked": 40,
+        "two_sided_quotes": 0
+      },
+      {
+        "expiry": "20260620",
+        "checked": 40,
+        "two_sided_quotes": 0
+      },
+      {
+        "expiry": "20260621",
+        "checked": 38,
+        "two_sided_quotes": 0
+      }
+    ]
+  },
+  "params": {
+    "ivrank_window": 365,
+    "rv_window": 30,
+    "signal": 35.0
+  }
+}

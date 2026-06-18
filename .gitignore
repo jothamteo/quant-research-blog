@@ -20,3 +20,7 @@ code/prediction_market_calibration/data/resolved_markets.csv
 # The small baked outputs (results.json, groups_2026.json, market_snapshot_latest.json) ARE committed.
 code/world_cup_models/data/results.csv
 code/world_cup_models/data/market_snapshot_2*.json
+
+# Vol-buying study: re-downloadable raw series (results.json IS committed)
+code/vol_buying_crypto/data/dvol_btc.csv
+code/vol_buying_crypto/data/btc_daily.csv
