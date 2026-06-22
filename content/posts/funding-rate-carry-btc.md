@@ -5,6 +5,10 @@ draft: false
 math: true
 tags: ["crypto", "perpetuals", "carry-trade", "funding-rate", "btc", "backtest"]
 summary: "The canonical 'short perp / long spot' carry trade on BTCUSDT delivered +7.4% annualised funding-only PnL over the last three years on Binance. The headline Sharpe of 15 is meaningless on its own. This post backtests the trade, reports what the data actually show, and itemises the risks that the headline number ignores."
+cover:
+  image: "/quant-research-blog/covers/funding-rate-carry-btc.png"
+  alt: "funding-rate-carry-btc"
+  relative: false
 ---
 
 Picture being a landlord. Every month the rent lands in your account — steady,

@@ -5,6 +5,10 @@ draft: false
 math: true
 tags: ["methodology", "event-study", "linear-algebra", "statistics", "explainer"]
 summary: "The Brown-Warner market model is the workhorse of event-study research, but it is often presented as a recipe rather than as a piece of statistics. This post walks through the linear algebra and the statistics behind it — from the per-event OLS to the cumulative-abnormal-return test statistic — and uses a worked synthetic example to show the methodology recovering a planted effect."
+cover:
+  image: "/quant-research-blog/covers/event-study-methodology.png"
+  alt: "event-study-methodology"
+  relative: false
 ---
 
 A marketing manager runs a big campaign in March. Sales jump 10%. Did the

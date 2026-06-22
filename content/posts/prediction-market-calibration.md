@@ -5,6 +5,10 @@ draft: false
 math: true
 tags: ["prediction-markets", "calibration", "scoring-rules", "manifold", "empirical"]
 summary: "I pulled 5,125 resolved binary markets from Manifold and ran a standard reliability-diagram and scoring-rule analysis. The headline: markets at their closing probability are well-calibrated — almost perfectly so above $1,000 in volume — and beat both a 50% prior and a base-rate baseline by a factor of three on the Brier score. I also report where the calibration fails and what the result does and does not buy you."
+cover:
+  image: "/quant-research-blog/covers/prediction-market-calibration.png"
+  alt: "prediction-market-calibration"
+  relative: false
 ---
 
 When your weather app says "70% chance of rain," what does that number actually

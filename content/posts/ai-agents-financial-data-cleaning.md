@@ -5,6 +5,10 @@ draft: false
 math: false
 tags: ["practitioner", "data-engineering", "ai-agents", "llm", "tooling"]
 summary: "Notes from a year of using AI coding agents in my quantitative-research workflow — specifically for the messy, low-glamour data work that sits between a vendor feed and a backtest. Where agents reliably helped, where they reliably failed, and what an honest reproducible-pipeline discipline looks like once non-deterministic tools are in the loop."
+cover:
+  image: "/quant-research-blog/covers/ai-agents-financial-data-cleaning.png"
+  alt: "ai-agents-financial-data-cleaning"
+  relative: false
 ---
 
 I have spent a meaningful chunk of the last year doing quantitative

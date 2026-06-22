@@ -5,6 +5,10 @@ draft: false
 math: true
 tags: ["market-making", "grid-trading", "crypto", "mean-reversion", "backtest", "reproducible-research"]
 summary: "Grid and market-making bots promise to 'profit from volatility.' I backtested one on 40,000 hours of BTC and bucketed every week by its trend strength. The truth: a grid bot is short the trend. It wins ~70% of weeks, but its return is a near-perfect inverted-cubic in trend strength — small grind in calm markets, brutal losses in strong ones — exactly the shape a recent statistical-mechanics paper predicts."
+cover:
+  image: "/quant-research-blog/covers/grid-bot-regime.png"
+  alt: "grid-bot-regime"
+  relative: false
 ---
 
 Every grid-bot advert shows the same picture: a price sawtoothing up and down, and

@@ -5,6 +5,10 @@ draft: false
 math: true
 tags: ["options", "volatility", "crypto", "deribit", "market-microstructure", "reproducible-research"]
 summary: "Selling options harvests the variance risk premium — until it blows up. The opposite trade, systematically *buying* cheap vol and selling the bounce, is harder to kill. I test it on 5 years of Deribit BTC implied vol, find the mean-reversion edge is real but subtler than it looks, and then ask the question that actually decides it: can you afford the spread? BTC on Deribit clears the bar; HYPE options on derive.xyz don't even have a quote."
+cover:
+  image: "/quant-research-blog/covers/buying-cheap-vol-crypto.png"
+  alt: "buying-cheap-vol-crypto"
+  relative: false
 ---
 
 Think about who sells flood insurance. They collect a premium from everyone,

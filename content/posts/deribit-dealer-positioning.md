@@ -5,6 +5,10 @@ draft: false
 math: true
 tags: ["options", "microstructure", "deribit", "gex", "svi", "btc"]
 summary: "I built a browser-only Deribit BTC options dashboard that fits Gatheral SVI per expiry, computes dealer gamma exposure under the SqueezeMetrics canonical sign convention, and surfaces 25-delta risk-reversal, butterfly and max-pain. This is the post explaining what the dashboard is reading and where the dealer-positioning story actually holds up vs. where it is borrowed faith."
+cover:
+  image: "/quant-research-blog/covers/deribit-dealer-positioning.png"
+  alt: "deribit-dealer-positioning"
+  relative: false
 ---
 
 Think about the thermostat in your house. When the room gets too warm it kicks

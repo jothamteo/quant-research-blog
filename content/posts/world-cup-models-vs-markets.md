@@ -5,6 +5,10 @@ draft: false
 math: true
 tags: ["prediction-markets", "sports", "elo", "dixon-coles", "reproducible-research", "crypto"]
 summary: "I fit two transparent football models — Dixon-Coles and Elo — checked that they're actually calibrated out-of-sample, then put them against two real-money prediction markets pricing the exact same bets: Polymarket and Hyperliquid's six-week-old HIP-4 World Cup markets. The interesting part isn't any single number, it's the disagreements — and an honest look at whether 'disagreement equals edge' actually holds."
+cover:
+  image: "/quant-research-blog/covers/world-cup-models-vs-markets.png"
+  alt: "world-cup-models-vs-markets"
+  relative: false
 ---
 
 Picture two betting kiosks on the same street. Same sport, same question — *who

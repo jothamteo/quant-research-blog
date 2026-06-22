@@ -5,6 +5,10 @@ draft: false
 math: true
 tags: ["prediction-markets", "options", "crypto", "deribit", "polymarket", "market-microstructure", "reproducible-research"]
 summary: "Polymarket sells you a contract that pays $1 if Bitcoin is above some price on some date. The options market prices the exact same bet — you just have to dig it out of the call curve. A new paper finds the two disagree by 5–11 percentage points. I rebuilt the test on live data: at the short, liquid end the venues agree to ~1.6pp, but Polymarket is systematically rich in the long-shot tails — the same tilt the paper documents, scaled down by maturity."
+cover:
+  image: "/quant-research-blog/covers/polymarket-vs-option-implied-btc.png"
+  alt: "polymarket-vs-option-implied-btc"
+  relative: false
 ---
 
 Picture two bookmakers on the same street taking bets on one question: *will

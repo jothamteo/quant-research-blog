@@ -5,6 +5,10 @@ draft: false
 math: true
 tags: ["event-study", "equities", "index-effects", "reproducible-research"]
 summary: "The classic 'index-addition premium' — the run-up in a stock's price in the days before it joins the S&P 500 — has been documented for decades. I replicate it on 204 events from 2000-2022 using a Brown-Warner market-model event study, and find that it has compressed to essentially zero in the post-2010 era."
+cover:
+  image: "/quant-research-blog/covers/sp500-index-addition-premium.png"
+  alt: "sp500-index-addition-premium"
+  relative: false
 ---
 
 Imagine you knew, a week in advance, that a buyer was about to walk into the

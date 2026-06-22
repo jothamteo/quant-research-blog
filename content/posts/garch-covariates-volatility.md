@@ -5,6 +5,10 @@ draft: false
 math: true
 tags: ["volatility", "garch", "forecasting", "equities", "reproducible-research"]
 summary: "A GARCH model forecasts tomorrow's volatility from price history alone — the résumé. A recent paper argues you should add 'interview' signals like the VIX and realized vol. I tested that on 22 years of S&P 500 data: bolting the VIX onto GARCH barely helps (+0.3%), but a model built directly on realized volatility beats GARCH by 9.5% out-of-sample. The lesson isn't 'add covariates' — it's which signal, used how."
+cover:
+  image: "/quant-research-blog/covers/garch-covariates-volatility.png"
+  alt: "garch-covariates-volatility"
+  relative: false
 ---
 
 When a firm hires an analyst, the résumé is the starting point — grades, degrees,
