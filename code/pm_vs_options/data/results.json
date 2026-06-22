@@ -1,0 +1,121 @@
+{
+  "summary": {
+    "fetched_at_utc": "2026-06-22T04:02:46.849305+00:00",
+    "n": 43,
+    "mean_gap_pp": 0.81,
+    "mean_abs_gap_pp": 1.58,
+    "naive_t": 2.46,
+    "pct_pm_rich": 74.4,
+    "dates": [
+      "2026-06-22",
+      "2026-06-23",
+      "2026-06-24",
+      "2026-06-25",
+      "2026-06-26"
+    ],
+    "gap_low_prob": 1.7,
+    "gap_mid_prob": 0.35,
+    "gap_high_prob": 0.03
+  },
+  "june26": [
+    {
+      "date": "2026-06-26",
+      "dte_days": 4.16,
+      "strike": 54000,
+      "spot": 63887,
+      "pm_yes": 0.994,
+      "opt_prob": 0.9862,
+      "gap_pp": 0.78
+    },
+    {
+      "date": "2026-06-26",
+      "dte_days": 4.16,
+      "strike": 56000,
+      "spot": 63887,
+      "pm_yes": 0.9935,
+      "opt_prob": 0.9768,
+      "gap_pp": 1.67
+    },
+    {
+      "date": "2026-06-26",
+      "dte_days": 4.16,
+      "strike": 58000,
+      "spot": 63887,
+      "pm_yes": 0.9685,
+      "opt_prob": 0.9583,
+      "gap_pp": 1.02
+    },
+    {
+      "date": "2026-06-26",
+      "dte_days": 4.16,
+      "strike": 60000,
+      "spot": 63887,
+      "pm_yes": 0.925,
+      "opt_prob": 0.9104,
+      "gap_pp": 1.46
+    },
+    {
+      "date": "2026-06-26",
+      "dte_days": 4.16,
+      "strike": 62000,
+      "spot": 63887,
+      "pm_yes": 0.765,
+      "opt_prob": 0.789,
+      "gap_pp": -2.4
+    },
+    {
+      "date": "2026-06-26",
+      "dte_days": 4.16,
+      "strike": 64000,
+      "spot": 63887,
+      "pm_yes": 0.505,
+      "opt_prob": 0.5398,
+      "gap_pp": -3.48
+    },
+    {
+      "date": "2026-06-26",
+      "dte_days": 4.16,
+      "strike": 66000,
+      "spot": 63887,
+      "pm_yes": 0.235,
+      "opt_prob": 0.2236,
+      "gap_pp": 1.14
+    },
+    {
+      "date": "2026-06-26",
+      "dte_days": 4.16,
+      "strike": 68000,
+      "spot": 63887,
+      "pm_yes": 0.075,
+      "opt_prob": 0.0511,
+      "gap_pp": 2.39
+    },
+    {
+      "date": "2026-06-26",
+      "dte_days": 4.16,
+      "strike": 70000,
+      "spot": 63887,
+      "pm_yes": 0.0225,
+      "opt_prob": 0.0096,
+      "gap_pp": 1.29
+    },
+    {
+      "date": "2026-06-26",
+      "dte_days": 4.16,
+      "strike": 72000,
+      "spot": 63887,
+      "pm_yes": 0.0095,
+      "opt_prob": 0.0043,
+      "gap_pp": 0.52
+    },
+    {
+      "date": "2026-06-26",
+      "dte_days": 4.16,
+      "strike": 74000,
+      "spot": 63887,
+      "pm_yes": 0.0115,
+      "opt_prob": -0.0,
+      "gap_pp": 1.15
+    }
+  ]
+}
