@@ -24,3 +24,6 @@ code/world_cup_models/data/market_snapshot_2*.json
 # Vol-buying study: re-downloadable raw series (results.json IS committed)
 code/vol_buying_crypto/data/dvol_btc.csv
 code/vol_buying_crypto/data/btc_daily.csv
+
+# Grid-bot study: re-downloadable hourly BTC (results.json IS committed)
+code/grid_bot_regime/data/btc_1h.csv
