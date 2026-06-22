@@ -27,3 +27,6 @@ code/vol_buying_crypto/data/btc_daily.csv
 
 # Grid-bot study: re-downloadable hourly BTC (results.json IS committed)
 code/grid_bot_regime/data/btc_1h.csv
+
+# GARCH covariates: re-downloadable S&P/VIX (results.json IS committed)
+code/garch_covariates/data/spx_vix.csv
