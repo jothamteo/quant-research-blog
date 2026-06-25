@@ -56,6 +56,8 @@ params:
       on GitHub.
 
   socialIcons:
+    - name: x
+      url: "https://x.com/jothamteo"
     - name: github
       url: "https://github.com/jothamteo"
     - name: rss
