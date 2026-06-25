@@ -12,11 +12,11 @@ cover:
 ---
 
 There is a buyer walking into the market this Friday who *has* to buy roughly
-**$22-27 billion** of one stock, at the close, regardless of price — not because
+**\$22-27 billion** of one stock, at the close, regardless of price — not because
 it's cheap, but because a rule says they must. The stock is SpaceX
 ([NASDAQ: SPCX](https://www.investopedia.com/spacex-stock-is-coming-to-an-index-fund-near-you-soon-here-s-what-to-watch-for-and-when-spcx-12000853)),
 fresh off [the largest IPO in history](https://finance.yahoo.com/markets/stocks/articles/spacex-added-russell-1000-russell-092600311.html)
-— a ~$75bn raise on 12 June at a ~$1.75tn valuation — and the rule is the annual
+— a ~\$75bn raise on 12 June at a ~\$1.75tn valuation — and the rule is the annual
 **Russell reconstitution**, which takes effect at the close on **Friday, 26 June
 2026**.
 
@@ -66,7 +66,7 @@ $$
 where $w_{\text{SpaceX}}$ is SpaceX's *float-adjusted* index weight. We don't get
 to know that weight precisely — it depends on the public float FTSE Russell
 applies — so rather than invent a number, here's the whole surface, with the
-publicly-reported $22-27bn band marked:
+publicly-reported \$22-27bn band marked:
 
 ![forced demand](/quant-research-blog/charts/spacex-russell-etf-flow/forced_demand.png)
 
@@ -113,7 +113,7 @@ with $Q$ the forced demand and ADV the stock's average daily volume.
 
 The lever that decides everything is **$Q/\text{ADV}$**. SpaceX is the rare add
 where the forced ticket is enormous *and* the name is deeply liquid — a hot
-mega-IPO trades billions a day in its first weeks. If $24bn of demand meets a
+mega-IPO trades billions a day in its first weeks. If \$24bn of demand meets a
 genuinely deep tape, the concession is a couple of tens of bps and the auction
 absorbs it quietly. If first-week volume thins out faster than expected, the same
 ticket sits at $\sim$1× ADV and the print gets violent. The trade is to provide
@@ -151,7 +151,7 @@ that occasionally disagree about a trillion-dollar company.
 ## The honest caveat
 
 Everything here is well-advertised, which is exactly why the easy version is
-gone. The add date is known, the ~$22-27bn is known, the style split is
+gone. The add date is known, the ~\$22-27bn is known, the style split is
 published. By Friday's close most of the anticipation is priced; what's left is
 the *immediacy premium* in the auction and the relative-value tilts — real, but
 measured in tens of bps and contested by every flow desk and ETF arb shop on the
