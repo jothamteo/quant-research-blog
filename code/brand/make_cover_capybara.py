@@ -45,6 +45,17 @@ MOTIFS = {
          "that jumps up then mean-reverts), surrounded by floating line charts, "
          "candlestick charts, currency symbols dollar euro yen, and small "
          "mathematical and statistical notation, foreign-exchange trading theme"),
+    "llm-forecaster-profit":
+        ("the capybara is gazing into a glowing crystal ball on the desk, inside "
+         "the crystal ball floats probability numbers and a tiny prediction market "
+         "price chart, scattered around the desk are bar charts, accuracy graphs, "
+         "floating yes/no binary cards, small brain and dollar coin icons, soft "
+         "magical forecasting glow, cozy bookshelf in background, whimsical quant theme"),
+    "amm-oracle-manipulation":
+        ("the monitor shows a hyperbolic constant-product curve x*y=k with a dot "
+         "sliding along it, surrounded by floating liquidity pool icons, DeFi token "
+         "symbols, oracle eye symbols, a small hacker figure pushing a balance scale, "
+         "blockchain hexagon patterns in background, cozy crypto quant theme"),
 }
 
 
