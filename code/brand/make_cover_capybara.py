@@ -56,6 +56,14 @@ MOTIFS = {
          "sliding along it, surrounded by floating liquidity pool icons, DeFi token "
          "symbols, oracle eye symbols, a small hacker figure pushing a balance scale, "
          "blockchain hexagon patterns in background, cozy crypto quant theme"),
+    "webcryptoagent":
+        ("two large glowing crypto coins dominate the scene floating prominently in "
+         "the foreground: a big orange bitcoin BTC coin on the left with the Bitcoin "
+         "B symbol, and a big blue-purple ethereum ETH coin on the right with the "
+         "Ethereum diamond logo, both coins large and clearly visible, the capybara "
+         "at the desk looks up at the two floating coins in the air, the monitor "
+         "shows two price charts one orange one blue, small sparkles and candlestick "
+         "charts in background, cozy storybook crypto trading mood, warm and cozy"),
     "hyperliquid-risk-engine":
         ("the computer monitor on the desk clearly shows a crypto candlestick price "
          "chart that crashes downward, a few small green up-candles on the left then "
