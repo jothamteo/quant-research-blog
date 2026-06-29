@@ -56,6 +56,14 @@ MOTIFS = {
          "sliding along it, surrounded by floating liquidity pool icons, DeFi token "
          "symbols, oracle eye symbols, a small hacker figure pushing a balance scale, "
          "blockchain hexagon patterns in background, cozy crypto quant theme"),
+    "hyperliquid-risk-engine":
+        ("the computer monitor on the desk clearly shows a crypto candlestick price "
+         "chart that crashes downward, a few small green up-candles on the left then "
+         "one big dramatic long red candlestick plunging straight down at the right, "
+         "a steep market crash dump, a small red downward arrow, simple clean "
+         "hand-drawn candlesticks painted in the same soft storybook style as the "
+         "scene, a few small floating red percentage-down and dollar symbols, "
+         "tense market-crash mood but still cozy and warm"),
 }
 
 
